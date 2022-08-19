@@ -1,0 +1,13 @@
+.game-grid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 200px 200px 200px ;
+    grid-template-rows: 200px 200px 200px ;
+}
+
+section > div {
+    padding: 10px;
+    background-color: white;
+    border: solid black;
+}
+
