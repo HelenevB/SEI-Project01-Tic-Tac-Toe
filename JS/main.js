@@ -1,6 +1,11 @@
 
-let gameboard =["box1", "box2","box3", "box4", "box5", "box6", "box7","box8","box9"]
+const gameboard = document.querySelector(".game-grid");
 
+for (let i = 0; i < 9; i++){
+let square =document.createElement('div')
+square.setAttribute("class", "box")
+ gameboard.appendChild(square)
+}
 
 // console.log(gameboard)
 //  on loading the game  just the start button appears 
@@ -16,8 +21,6 @@ function loadGame (){
 $('#startgame').click(function(){
     $('.game-grid').show();
     $(this).hide(); 
-    $('.box').removeClass('X')
-    $('.box').removeClass('O')
 })
 }
 
@@ -30,8 +33,9 @@ $('#startgame').click(function(){
 function switchTurns(e){
  if(playerCounter % 2 === 0) {
     console.log(e.target) 
-    $(e.target).removeClass('o');
-     $(e.target).addClass('X').off('click');
+    $(e.target).removeClass('O');
+     $(e.target).addClass('X')
+     $(e.target).off('click');
      playerCounter += 1 
  }
 else {
@@ -57,7 +61,7 @@ else {
 function checkRow(a, b, c) {
 
     if(a === 'X' && b === 'X' && c === 'X'){  
-      return 
+     
        
     }
     

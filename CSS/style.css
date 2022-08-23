@@ -16,20 +16,22 @@ body {
 
 .game-grid {
     display: grid;
-    margin: 15px;
+    margin: auto;
     grid-template-columns: 200px 200px 200px ;
     grid-template-rows: 200px 200px 200px ;
    justify-content: center;
+   height: 1000px;
+   width: 1000px;
     
  } 
 
-section > div {
-  
+ div {
+    height: 200px;
+    width: 200px;
     background-color: white;
     border: black solid;
     justify-content: center;
-    margin: 5px;
-
+    margin-top: 150px;
 }
 
 .X {
@@ -49,5 +51,3 @@ section > div {
     height: 400px;
     border:black solid;
 } */
-
-
