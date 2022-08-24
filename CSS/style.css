@@ -14,36 +14,51 @@ body {
 
 }
 
+h1{
+    text-align: center;
+    font-size:100px;
+}
+
 .game-grid {
-    display: grid;
+     display: grid;
     margin: auto;
     grid-template-columns: 200px 200px 200px ;
     grid-template-rows: 200px 200px 200px ;
    justify-content: center;
    height: 1000px;
-   width: 1000px;
+   width: 1000px; 
     
  } 
 
- div {
-    height: 200px;
+.box {
+     height: 200px;
     width: 200px;
     background-color: white;
     border: black solid;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 100px
+}
+
+.message {
+    text-align: center;
+    font-size: 70px;
 }
 
 .X {
-    background-color: red;
-
+    
+    font-size: 150px;
+    text-align: center;
+    justify-content: center;
 }
 
 .O {
 
-    background-color: blue;
-
+    font-size: 150px;
+    text-align: center;
+    justify-content: center;
 }
+
+
 /* form {
     margin: auto;
     text-align: center;
