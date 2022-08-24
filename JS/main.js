@@ -6,6 +6,9 @@ let gameboard = document.querySelector(".game-grid");
 let currentPlayer = ""
 let playerOne = 0;
 let playerTwo = 0;
+let playerCounter = 0
+
+
 
 for (let i = 0; i < 9; i++){
 let square =document.createElement('div')
@@ -23,8 +26,9 @@ $(document).ready(function(){
     $("#restart").hide();
     $('.game-grid').hide();
      $('#startgame').bind('click',loadGame);
-    fetchBoard ()
+     fetchBoard()
 });
+
 
 
 //  once start button is pressed grid appears and removeClass is added to ensure grid is clear at the start 
@@ -38,21 +42,19 @@ $('#startgame').click(function(){
 });
 }
 
-
- let playerCounter = 0
- let panelCount = 0
 // function of playGame =  player count is added for each move if the playercount is even the class for O is removed and X added. i.e X turn and player count goes up
 //  after go the computer will check for a win 
 
-function switchTurns(e){
- if(playerCounter % 2 === 0) {
+function  playGame (e){
+
+    if(playerCounter % 2 === 0) {
     currentPlayer= "X"
     $(e.target).removeClass('O');
      $(e.target).addClass('X')
      $(e.target).text('X')
      $(e.target).off('click');
      $('.message').text("it is O's turn")
-     playerCounter += 1 
+     playerCounter +=1
  }
 
 else {
@@ -61,38 +63,35 @@ else {
     $(e.target).addClass('O').off('click');
     $(e.target).text('O')
     $('.message').text(`it is X's turn`)
-    playerCounter += 1;
+     playerCounter +=1
   }
-
-  if (checkWin(fetchBoard()) !==0) {
+  console.log(playerCounter)
+ 
+  if (checkWin(fetchBoard()) != 0) {
     $('.box').off('click')
-    $('.message').text(`${currentPlayer} is the winner`)
+    $('.message').text(` ${currentPlayer} is the winner`)
+
     setTimeout(function(){refreshGame()},3000)
-     return;
-    }  
-    else {
-
-    }
-        
-    }
+     return; 
+    } 
+    if (playerCounter === 9 ){
+        $('.message').text("It is a draw")
+        setTimeout(function(){refreshGame()},3000)
+     }
+     return playerCounter
+     }
     
-
-   
 
 function fetchBoard (){
-     let board= [];
-    $('.game-grid div').each(function(index){
-      board[index]=$(this).text();
-     })
-    console.log(panelCount)
-    console.log(board)
+    let board= []
+   $('.game-grid div').each(function(index){
+   board[index]=$(this).text();
+      })
+      console.log(board)
     return board 
-    }
-    
-    
 
-
-   
+     }
+       
 function checkRow(a, b, c) {
   
     if (a === 'X' && b === 'X' && c === 'X') {
@@ -103,10 +102,8 @@ function checkRow(a, b, c) {
     } 
   else {return 0;
     }
-    
     }
-
-
+  
 
 function checkWin(gameboard) {
     return checkRow(gameboard[0],gameboard[1], gameboard[2])
@@ -120,16 +117,17 @@ function checkWin(gameboard) {
 }
 
 
-
 function refreshGame () {
+    playerCounter = 0
     $('.box').removeClass('X').removeClass('O')
     $('.box').text('')
     $('.box').bind('click')
-    $('.message').text(`${currentPlayer} to start`)
+    $('.message').text(` X to start`)
     $('#restart').show()
-    $('.box').on('click', switchTurns)
+    $('.box').on('click', playGame )
 }
 
 
 
-$('.box').on('click', switchTurns)
+$('.box').on('click', playGame)
+
