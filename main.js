@@ -8,6 +8,17 @@ let playerCounter = 0
 
 
 
+$(document).ready(function(){
+    $(".playerScore").hide();
+     $("#restart").hide();
+     $('.game-grid').hide();
+     $('#startgame').on('click',loadGame);
+    //  fetchBoard()
+     $('.box').on('click', playGame)
+     $('#restart').on('click',restartGame)  
+});
+
+
 for (let i = 0; i < 9; i++){
 let square =document.createElement('div')
 square.setAttribute("class", "box")
@@ -17,18 +28,16 @@ gameboard.appendChild(square)
 }
 
 
-$(document).ready(function(){
-    $(".playerScore").hide();
-    $("#restart").hide();
-    $('.game-grid').hide();
-     $('#startgame').on('click',loadGame);
-     fetchBoard()
-     $('.box').on('click', playGame)
-     $('#restart').on('click',restartGame)  
-});
+function fetchBoard (){
+    let board= []
+   $('.game-grid div').each(function(index){
+   board[index]=$(this).text();
+      })
+      console.log(board)
+    return board 
 
-// console.log(gameboard)
-//  on loading the game  just the start button appears 
+     }
+       
 
 
 //  once start button is pressed grid appears and removeClass is added to ensure grid is clear at the start 
@@ -40,6 +49,7 @@ $('#startgame').click(function(){
     $('.game-grid').show();
     $(this).hide()
     $('.message').show();
+    $('#restart').hide()
 });
 }
 
@@ -71,12 +81,12 @@ else {
   if (checkWin(fetchBoard()) != 0) {
     $('.box').off('click')
     $('.message').text(`${currentPlayer} Won`)
-    setTimeout(function(){refreshGame()},3000)
+    setTimeout(function(){refreshBoard()},3000)
      return; 
     }  
     if (playerCounter === 9 ){
         $('.message').text("It's A Tie !")
-        setTimeout(function(){refreshGame()},3000)
+        setTimeout(function(){refreshBoard()},3000)
      }
  
      return playerCounter
@@ -119,28 +129,26 @@ function checkWin(gameboard) {
 }
 
 
-function refreshGame () {
-    playerCounter = 0
+function refreshBoard () {
+   playerCounter = 0
     $('.box').removeClass('X').removeClass('O')
     $('.box').text('')
-    $('.message').text(` X To Start`).removeClass('Oturn').addClass('Xturn')
-    $('.box').on('click', playGame )
-     $('#restart').show()
-}
+    $('.message').text(` X To Start`).removeClass('X').removeClass('Oturn').addClass('Xturn')
+    $('#restart').show()
+     $('.box').on('click', playGame )
+ }
 
 function restartGame(){
-$('#restart').click(function(){
-    $(this).hide(); 
-    $('.game-grid').hide();;
-    $('.box').text('')
-    $('.message').hide()
-    $('h1').removeClass('h1-after').addClass('h1')
-    $('#startgame').show()
-})
-}
+    $('#restart').click(function(){
+        $(this).hide(); 
+        $('.game-grid').hide();
+        $('.box').text('')
+        $('.message').hide().removeClass('X').removeClass('Oturn').addClass('Xturn')
+        $('h1').removeClass('h1-after').addClass('h1')
+        $('#startgame').show()
+    })
+    }
 
-// $('#startgame').on('click',loadGame)
-// $('.box').on('click', playGame)
 
 
 
