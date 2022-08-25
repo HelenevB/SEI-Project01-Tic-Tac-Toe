@@ -93,16 +93,6 @@ else {
 
      }
     
-
-function fetchBoard (){
-    let board= []
-   $('.game-grid div').each(function(index){
-   board[index]=$(this).text();
-      })
-      console.log(board)
-    return board 
-
-     }
        
 function checkRow(a, b, c) {
   
