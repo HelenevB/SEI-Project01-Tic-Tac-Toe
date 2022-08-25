@@ -11,8 +11,7 @@
 -----
 
 *[User's stores](https://trello.com/b/hySlpAfs/project-1)
-*
-––––––
+-----
 
 ### Background  to the project 
 
