@@ -1,5 +1,5 @@
 
-   
+
 
 let gameboard = document.querySelector(".game-grid");
 
@@ -16,8 +16,6 @@ gameboard.appendChild(square)
 
 }
 
-// console.log(gameboard)
-//  on loading the game  just the start button appears 
 
 $(document).ready(function(){
     $(".playerScore").hide();
@@ -31,6 +29,8 @@ $(document).ready(function(){
 
 });
 
+// console.log(gameboard)
+//  on loading the game  just the start button appears 
 
 
 //  once start button is pressed grid appears and removeClass is added to ensure grid is clear at the start 
