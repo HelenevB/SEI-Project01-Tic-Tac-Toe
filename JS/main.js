@@ -36,6 +36,7 @@ function loadGame (){
 $('#startgame').click(function(){
     $('.box').removeClass('X')
     $('.box').removeClass('O')
+    $('h1').addClass('h1-after')
     $('.game-grid').show();
     $(".playerScore").show()
     $(this).hide(); 
@@ -48,12 +49,12 @@ $('#startgame').click(function(){
 function  playGame (e){
 
     if(playerCounter % 2 === 0) {
-    currentPlayer= "X"
+    currentPlayer = "X"
     $(e.target).removeClass('O');
      $(e.target).addClass('X')
      $(e.target).text('X')
      $(e.target).off('click');
-     $('.message').text("it is O's turn")
+    $('.message').text(" O Turn").removeClass('Xturn').addClass('Oturn')
      playerCounter +=1
  }
 
@@ -62,20 +63,19 @@ else {
     $(e.target).removeClass('X');
     $(e.target).addClass('O').off('click');
     $(e.target).text('O')
-    $('.message').text(`it is X's turn`)
+    $('.message').text(`X Turn`).removeClass('Oturn').addClass('Xturn')
      playerCounter +=1
   }
   console.log(playerCounter)
  
   if (checkWin(fetchBoard()) != 0) {
     $('.box').off('click')
-    $('.message').text(` ${currentPlayer} is the winner`)
-
+    $('.message').text(`${currentPlayer} Won`)
     setTimeout(function(){refreshGame()},3000)
      return; 
     } 
     if (playerCounter === 9 ){
-        $('.message').text("It is a draw")
+        $('.message').text("It's A Tie !")
         setTimeout(function(){refreshGame()},3000)
      }
      return playerCounter
@@ -102,7 +102,7 @@ function checkRow(a, b, c) {
     } 
   else {return 0;
     }
-    }
+}
   
 
 function checkWin(gameboard) {
@@ -122,12 +122,10 @@ function refreshGame () {
     $('.box').removeClass('X').removeClass('O')
     $('.box').text('')
     $('.box').bind('click')
-    $('.message').text(` X to start`)
+    $('.message').text(` X To Start`).removeClass('Oturn').addClass('Xturn')
     $('#restart').show()
     $('.box').on('click', playGame )
 }
-
-
 
 $('.box').on('click', playGame)
 

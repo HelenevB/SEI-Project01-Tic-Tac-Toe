@@ -1,22 +1,48 @@
 body {
   
     height: 1250px;
-    width: 1250x;
-    border: solid black;
-
+    width: 1250px;
+    background-color: rgb(249, 243, 194);
+    font-family:Arial, Helvetica, sans-serif;
+  
 }
 
  #startgame {
     height: 100px;
     width: 800px;
-    margin:750px;
-    margin-top: 350px;
+    margin-top: 100px;
+    margin-left: 875px;
+    border-radius: 15px;
+    background-color: purple;
+    border-bottom: 15px solid rgb(50, 8, 50);
+    border-left: 3px solid rgb(50, 8, 50);
+    border-right: 3px solid rgb(50, 8, 50);
+    font-size: 50px;
+    color: rgb(216, 210, 210);
 
 }
 
-h1{
+h1 {
     text-align: center;
     font-size:100px;
+    font-family:Arial, Helvetica, sans-serif;
+    justify-content: center;
+    margin-top: 300px;
+    margin-bottom: 0px;
+   color: darkorange;
+   text-shadow: 10px 10px  rgb(69, 2, 69);
+ 
+}
+
+.h1-after {
+
+    text-align: center;
+    font-size:100px;
+    margin-top: 45px;
+    margin-bottom: 50px;
+    color: darkorange;
+    text-shadow: 10px 10px  rgb(69, 2, 69);
+
 }
 
 .game-grid {
@@ -25,8 +51,9 @@ h1{
     grid-template-columns: 200px 200px 200px ;
     grid-template-rows: 200px 200px 200px ;
    justify-content: center;
-   height: 1000px;
-   width: 1000px; 
+   height: 800px;
+   width: 800px; 
+   background-color: darkorange;
     
  } 
 
@@ -34,21 +61,28 @@ h1{
      height: 200px;
     width: 200px;
     background-color: white;
-    border: black solid;
+    border: darkorange solid;
     justify-content: center;
-    margin-top: 100px
+    margin-top: 100px;
+    background-color: khaki;
 }
 
 .message {
     text-align: center;
-    font-size: 70px;
+    font-size: 50px;
+    margin-bottom: 50px;
+    margin: 25px;
 }
 
-.X {
-    
+
+
+   .X {
+
     font-size: 150px;
     text-align: center;
     justify-content: center;
+    color: rgb(80, 5, 80);
+    text-shadow:4px 4px rgb(226, 133, 18);
 }
 
 .O {
@@ -56,8 +90,36 @@ h1{
     font-size: 150px;
     text-align: center;
     justify-content: center;
+    color: darkorange;
+    text-shadow:4px 4px rgb(50, 8, 50) ;
 }
 
+
+.Xturn {
+    color:  rgb(80, 5, 80);
+    text-shadow:3px 3px rgb(226, 133, 18);
+    font-size: 50px;
+    font-weight: bolder;
+}
+.Oturn {
+    color: darkorange;
+    text-shadow:4px 4px rgb(50, 8, 50);
+    font-size: 50px;
+    font-weight: bolder;
+
+}
+
+#restart {
+    text-align: center;
+    justify-content: center;
+    margin-left: 875px;
+    height: 50px;
+    width: 800px;
+    margin-top: 0PX;
+}
+
+
+  
 
 /* form {
     margin: auto;
