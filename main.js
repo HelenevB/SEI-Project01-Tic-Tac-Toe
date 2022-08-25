@@ -24,9 +24,7 @@ $(document).ready(function(){
      $('#startgame').on('click',loadGame);
      fetchBoard()
      $('.box').on('click', playGame)
-     $('#restart').on('click',restartGame)
-
-
+     $('#restart').on('click',restartGame)  
 });
 
 // console.log(gameboard)
@@ -40,8 +38,8 @@ $('#startgame').click(function(){
     $('.box').removeClass('O')
     $('h1').addClass('h1-after')
     $('.game-grid').show();
-    $(".playerScore").show()
     $(this).hide()
+    $('.message').show();
 });
 }
 
@@ -80,6 +78,7 @@ else {
         $('.message').text("It's A Tie !")
         setTimeout(function(){refreshGame()},3000)
      }
+ 
      return playerCounter
 
      }
@@ -132,14 +131,16 @@ function refreshGame () {
 function restartGame(){
 $('#restart').click(function(){
     $(this).hide(); 
-    $(".playerScore").hide()
-    $('.game-grid').hide();
-    $('.message').hide();
+    $('.game-grid').hide();;
+    $('.box').text('')
+    $('.message').hide()
     $('h1').removeClass('h1-after').addClass('h1')
     $('#startgame').show()
 })
 }
 
+// $('#startgame').on('click',loadGame)
+// $('.box').on('click', playGame)
 
 
 
