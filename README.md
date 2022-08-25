@@ -63,7 +63,8 @@ I considered  4 key elements for the game :
 *  Player Name and Character Selection 
 *  Player who wins to start the next round 
 *  scoreCount 
-*  restart button to disappear when a new games starts after the refresh and only appear again at the end. 
+*  restart button to disappear when a new games starts after the refresh and only appear again at the end.
+*  speed time next turn messages. make sure they appear after the click not on the click  
 *  Option to play against the computer 
 
 ### CSS Design 
