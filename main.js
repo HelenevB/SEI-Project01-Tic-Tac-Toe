@@ -48,7 +48,7 @@ $('#startgame').click(function(){
     $('h1').addClass('h1-after')
     $('.game-grid').show();
     $(this).hide()
-    $('.message').show();
+    $('.message').show().text("X To Start").addClass('Xturn')
     $('#restart').hide()
 });
 }
@@ -138,9 +138,5 @@ function restartGame(){
         $('#startgame').show()
     })
     }
-
-
-
-
 
 
