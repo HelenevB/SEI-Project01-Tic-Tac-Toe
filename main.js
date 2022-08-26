@@ -13,7 +13,7 @@ $(document).ready(function(){
      $("#restart").hide();
      $('.game-grid').hide();
      $('#startgame').on('click',loadGame);
-    //  fetchBoard()
+     fetchBoard()
      $('.box').on('click', playGame)
      $('#restart').on('click',restartGame)  
 });
