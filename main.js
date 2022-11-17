@@ -81,6 +81,13 @@ else {
   if (checkWin(fetchBoard()) != 0) {
     $('.box').off('click')
     $('.message').text(`${currentPlayer} Won`)
+    if(currentPlayer === "X" ){
+        $('.message').text(`${currentPlayer} Won`).addClass('Xturn').removeClass('Oturn')  
+    } else{
+
+        $('.message').text(`${currentPlayer} Won`).addClass('Oturn').removeClass('Xturn') 
+
+    }
     setTimeout(function(){refreshBoard()},3000)
      return; 
     }  
@@ -93,6 +100,7 @@ else {
 
      }
     
+
        
 function checkRow(a, b, c) {
   
