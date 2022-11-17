@@ -1,5 +1,5 @@
-## **General Assembly, Software Immersive Engineering Course – Project 1: Tic Tac Toe** 
--------
+## **Project 1: Tic Tac Toe** 
+---
 
 ### **Contents** 
  
@@ -47,7 +47,7 @@ If you want to try playing the game, you can access the deployed version [here](
 
 <br>
 
-####  **The Planning & Development Process**
+### **The Planning & Development Process**
 ---
 
 I spent the initial stages of the process sketching out the design for the game and writing out the logic for the game.
