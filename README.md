@@ -45,7 +45,7 @@
 
 > I spent the initial stages of the process sketching out the design for the game and writing out the logic for the game.
 
-<img src="images/Wireframe2.png">  <img src="images/wireframe2.png"> 
+<img src="images/Wireframe1.png">  <img src="images/wireframe2.png"> 
 
 
 
