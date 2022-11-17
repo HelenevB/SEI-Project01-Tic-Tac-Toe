@@ -1,4 +1,4 @@
-## General Assembly, Software Immersive Engineering Course – Project 1: Tic Tac Toe 
+### General Assembly, Software Immersive Engineering Course – Project 1: Tic Tac Toe 
 -------
 
 ### Contents 
@@ -12,7 +12,7 @@
 * Future Enhancements 
 * Key Learnings
 
-### Overview
+#### Overview
 ---
 
 <img src="images/Tic-Tac-Toe.jpg">
@@ -23,7 +23,7 @@
 
 > If you want to try playing the game, you can access the deployed version [here](https://pages.git.generalassemb.ly/hvb/Project-One-Tic-Tac-Toe/)
 
-### The Brief & Timeframe
+#### The Brief & Timeframe
 ---
 
 * Build a dynamic game that allows two players to compete from the same computer
@@ -32,7 +32,7 @@
 * This was a solo project 
 * Timeframe: 7 days 
 
-### Technologies used 
+#### Technologies used 
 ---
 
 * Html5
@@ -40,12 +40,12 @@
 * JavaScript
 * jQuery
 
-### The Planning & Development Process
+####  The Planning & Development Process
 ---
 
 > I spent the initial stages of the process sketching out the design for the game and writing out the logic for the game.
 
-<img src="images/Wireframe1.png">  <img src="images/wireframe2.png"> 
+<img src="images/Wireframe1.png" width=45% height=45%>  <img src="images/wireframe2.png" width=45% height=45%> 
 
 
 
