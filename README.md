@@ -76,11 +76,11 @@ I started off with a function that I named “switchTurns”(later renamed playG
 
 <img src="images/switchTurn1.png" width="50%" > 
 
-At this stage, I was feeling like I was making progress, I had a grid and on click of each box, an X ad O would appear alternatively. Now it was time to apply some logic to the game, I wrote this out in pseudocode first to help me breakdown my approach:
+At this stage, I was feeling like I was making progress, I had a grid and on click of each box, an X and O would appear alternatively. Now it was time to apply some logic to the game, I wrote this out in pseudocode first to help me breakdown my approach:
 
 <img src="images/pseudo.png" width="100%" > 
 
-To determine the state of play I need to create functions that check the win.  I had three functions in all:
+To determine the state of play I needed to create functions that check the win.  I had three functions in all:
 
 1. fetchBoards (), this took the value X & O from the board and placed them in an array at the given index. 
 
@@ -94,11 +94,11 @@ To determine the state of play I need to create functions that check the win.  I
 
 <img src="images/checkwin.png" width="100%" > 
 
-With all the pieces of the puzzle  laid out I need to fit them together to complete the game logic, this is where my inexperience showed as I was struggling to visualize how it would look, from my pseudocode I knew I needed to check for the win at the end of each turn, so knew I’d have to callback the checkWin() function within switchTurns() but wasn’t sure how, so at this stage, I decided to consult with our lecturer as I find talking through my process helps me navigate towards the answer I am looking for : 
+With all the pieces of the puzzle  laid out I needed to fit them together to complete the game logic, this is where my inexperience showed as I was struggling to visualize how it would look, from my pseudocode I knew I needed to check for the win at the end of each turn, so knew I’d have to callback the checkWin() function within switchTurns() but wasn’t sure how, so at this stage, I decided to consult with our lecturer as I find talking through my process helps me navigate towards the answer I am looking for : 
 
-After consultation, I established that I need to add two if statements at the end of my switchTurns ()  function.  The first if statement checks for the win. The If statement takes checkWin () (with fetch boards as paramenter), as it conditional argument, stating if it does not return a value of 0, than a player has won (this would either be -1= O. or  1=X)
+After consultation, I established that I needed to add two if statements at the end of my switchTurns ()  function.  The first if statement checks for the win. The If statement takes checkWin () (with fetch boards as parameter), as it conditional argument, stating if it does not return a value of 0, than a player has won (this would either be -1= O. or  1=X)
 
-To determine which player won, I stated a global variable called “currentPlayer” on the start of each go the currentPlayer value would then either be set to X or O, on checking for the win if the condition were met I instructed the computer to display the message that would display that this                   “currentPlayer” had won.
+To determine which player won, I stated a global variable called “currentPlayer” on the start of each go the currentPlayer value would then either be set to X or O, on checking for the win if the condition were met I instructed the computer to display the message that would display that this “currentPlayer” had won.
 .
 If there was no win stated, I needed the second if statement to determine if there was a draw.  A draw would only be possible if all boxes were full, so I used the playerCounter as the conditional argument stating if it was equal to 9 to end the game and announce a tie.
 
@@ -106,13 +106,13 @@ If there was no win stated, I needed the second if statement to determine if the
 
 <img src="images/playGame.png" width="100%" > 
 
-The game was now playable, however as I had spent a lot of the week on the game functionality, I had limited time to add all the planned features and explore styling. With the time I had, I decided to keep it simple with a basic colour theme to add a small bit of personality (i do love a block colour combo)!
+The game was now playable, however as I had spent a lot of the week on the game functionality, I had limited time to add all the planned features and explore styling. With the time I had, I decided to keep it simple with a basic colour theme to add a small bit of personality (I do love a block colour)!
 <br>
 
 ### **Wins & Challenges**
 ---
 
-The biggest win for me was meeting the required MVP. 2 weeks prior I had never developed let own deployed an application so to see the a visual of the skills I had learnt was very rewarding.
+The biggest win for me was meeting the required MVP. 2 weeks prior I had never developed let own deployed an application so to see the visual of the skills I had learnt was very rewarding.
 
 The biggest challenge was the JavaScript logic, many times throughout the build process I felt like I had the pieces of the puzzle but was struggling to make them all fit. Whilst I was keen to independently work through the task, I knew when in the process to ask for help to talk through the hurdles, allowing me to enhance my understanding and move through the task to meet the MVP.   
 <br>
