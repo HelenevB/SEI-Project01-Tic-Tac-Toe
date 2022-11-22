@@ -141,7 +141,7 @@ The biggest challenge was the JavaScript logic; many times throughout the build 
 * The player who wins starts the next round
 * Score count to be included 
 * Build a working restart functionality, i.e. score count goes back to zero, and the game fully restarts 
-* Enhance styling, i.e. hover effect et 
+* Enhance styling, i.e. hover effect over each box.
 <br>
 
 ### **Key Learnings**
