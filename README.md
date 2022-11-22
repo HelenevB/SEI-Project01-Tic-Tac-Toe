@@ -105,7 +105,7 @@ To determine the state of play, I needed to create functions that check the win.
 
 With all the puzzle pieces laid out, I needed to fit them together to complete the game logic; my inexperience showed as I struggled to visualise how it would look. From my pseudocode, I knew I needed to check for the win at the end of each turn, so I knew I’d have to call back the checkWin() function within switchTurns(). Still, I wasn’t sure how, so at this stage, I decided to consult with our lecturer as I find talking through my process helps me navigate towards the answer I am looking for:
 
-After consultation, I established that I needed to add two if statements at the end of my switchTurns() function. The first if statement checks for the win. The If statement takes checkWin() (with fetchBoard() as a parameter) as a conditional argument, stating if it does not return a value of  0, then a player has won (this would either be -1= O. or  1=X).
+After consultation, I established that I needed to add two if statements at the end of my switchTurns() function. The first if statement checks for the win. The If statement takes checkWin() (with fetchBoard() as a parameter) as a conditional argument, stating if it does not return a value of  0, then a player has won (this would either be -1= O, or  1=X).
 
 To determine which player won, I stated a global variable called “currentPlayer”. At the start of each go, the currentPlayer value would either be set to X or O. If a win was determined, I instructed the computer to display the message that the “currentPlayer” had won. The game would then reset. 
 
