@@ -99,7 +99,7 @@ To determine the state of play, I needed to create functions that check the win.
 
 <img src="images/checkRow.png" width="100%" > 
 
-3. checkWin(), this function would take one parameter as an argument which I named “gameboard”. And then, within the function, checkRow() is called back eight times, mapping over all possible winning combinations from the gameboard, to see if the checkrow conditions are met
+3. checkWin(), this function would take one parameter as an argument which I named “gameboard”. And then, within the function, checkRow() is called back eight times, mapping over all possible winning combinations from the gameboard, to see if the checkrow conditions are met.
 
 <img src="images/checkwin.png" width="100%" > 
 
@@ -107,9 +107,9 @@ With all the puzzle pieces laid out, I needed to fit them together to complete t
 
 After consultation, I established that I needed to add two if statements at the end of my switchTurns() function. The first if statement checks for the win. The If statement takes checkWin() (with fetchBoard() as a parameter) as a conditional argument, stating if it does not return a value of  0, then a player has won (this would either be -1= O. or  1=X).
 
-To determine which player won, I stated a global variable called “currentPlayer” at the start of each go, the currentPlayer value would either be set to X or O. If a win was determined, I instructed the computer to display the message that the “currentPlayer” had won. The game would then reset. 
+To determine which player won, I stated a global variable called “currentPlayer”. At the start of each go, the currentPlayer value would either be set to X or O. If a win was determined, I instructed the computer to display the message that the “currentPlayer” had won. The game would then reset. 
 
-If there was no winner, I needed the second if statement to determine if there was a draw.  A draw would only be possible if all boxes were full, so I used the “playerCounter” as the conditional argument stating if it was equal to 9 to end the game and announce a tie.
+If there was no winner, I needed the second if statement to determine if there was a draw.  A draw would only be possible if all boxes were full, so I used the “playerCounter” as the conditional argument, stating if it was equal to 9, end the game and announce a tie.
 
 If neither of the if statement conditions were met, the new “playerCounter” value would be returned, and the next player would be allowed to make their move.
 
