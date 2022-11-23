@@ -40,7 +40,7 @@ You will find the deployed application [here](https://pages.git.generalassemb.ly
 ### **Technologies used** 
 ---
 
-* Html5
+* HTML5
 * CSS3
 * JavaScript
 * jQuery
@@ -66,7 +66,7 @@ To help manage the build, I broke down the development process into four section
 * Restarting the game 
 
 
-As part of the game set-up, I needed to create the grid for Tic-Tac-Toe. I initially did this with HTML and CSS, using a grid template. However, on review decided to minimise my use of HTML and build the grid in JavaScript using a for-loop. 
+As part of the game set-up, I needed to create the grid for Tic-Tac-Toe. I initially did this with HTML and CSS, using a grid template. However, on review, I decided to minimise my use of HTML and build the grid in JavaScript using a for-loop. 
 
 
 <img src="images/gridcode.png" width="100%"> 
@@ -99,7 +99,7 @@ To determine the state of play, I needed to create functions that check the win.
 
 <img src="images/checkRow.png" width="100%" > 
 
-3. checkWin(), this function would take one parameter as an argument which I named “gameboard”. And then, within the function, checkRow() is called back eight times, mapping over all possible winning combinations from the gameboard, to see if the checkrow conditions are met.
+3. checkWin(), this function would take one parameter as an argument which I named “gameboard”.Then, within the function, checkRow() is called back eight times, mapping over all possible winning combinations from the gameboard, to see if the checkrow conditions are met.
 
 <img src="images/checkwin.png" width="100%" > 
 
